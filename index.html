@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
+    <title>JS Quiz Assignment</title>
+    <script src="quizproject.js"></script>
+    <link rel="stylesheet" type="text/css" href="quizproject.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+  
+</head>
+<body onLoad="loadQuestion()">
+
+<section id="lightbox" onclick="closeLightBox()">
+   <div id="message">This is the message</div>
+</section>
+
+
+
+<h1>Genshin Impact Quiz</h1>
+<section id="fiftyfiftysection" onclick="use5050()"><img id="fiftyfiftyimg" src="quizimages/fiftyfifty.png" alt="5050 logo"></section>
+
+<main class="grid-container">
+  <header class="header">
+    <div id="question">The Question</div>
+  </header>
+  
+  <aside class="left">
+    <div id="optionsBox">
+      <div class="options" id="a" onclick="markIt('a')">A.</div>
+      <div class="options" id="b" onclick="markIt('b')">B.</div>
+      <div class="options" id="c" onclick="markIt('c')">C.</div>
+      <div class="options" id="d" onclick="markIt('d')">D.</div>
+    </div>
+  </aside> 
+
+  
+  <figure class="right"> <img id="image" src="" alt=""></figure>
+  
+  <footer class="footer1">
+    <p>Click one of the choices which you think is the answer.</p>
+  </footer>
+  
+  <footer class="footer2">
+    <p>Score <span id="score"></span></p>
+  </footer>
+</main>
+
+</body>
+</html>
+

@@ -1,0 +1,225 @@
+/*https://coolors.co/09bc8a-1c5d99-89daff-415d43-f5e0b7*/
+
+/* Start of Mobile/Default Version */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chakra Petch', sans-serif;
+  background-color:#89daff;
+}
+
+/* Style the header */
+
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+      'header' 
+      'left' 
+      'right' 
+      'footer1'
+	    'footer2';
+    
+}
+
+.header {
+  grid-area: header;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+  
+ 
+h1{
+  font-size: 15px;
+  text-align: center;
+}
+
+.left,
+.right,
+.header,
+.footer1, .footer2 {
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+/* Style the left column */
+.left {
+  padding: 0px;
+  margin: 0px;
+  grid-area: left;
+}
+
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  margin-top: 20px;
+  margin:0px;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: #f5e0b7;
+  padding: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer2 {
+  grid-area: footer2;
+  background-color: #f5e0b7;
+  padding: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+#question {
+  font-size: 20px;
+  font-weight:bold;
+  padding: 25px 25px;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.options {
+   font-size:15px;
+   height: auto;
+   width: auto;
+   background-color: #1c5d99;
+   padding: 20px 25px;
+   margin: 5px;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   border-radius: 15px;
+}
+
+.options:hover{
+   cursor:default;
+   background-color: #0c4d89;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.8); 
+  z-index:1;  
+}
+
+#message {
+    width:80%;
+    min-width:400px;
+    padding:20px;
+    background-color:#415d43;
+    color:white;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+    /* vertically and horizontally center the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#optionsBox{
+  display:grid;
+}
+
+.right > img{
+  border: 5px #1c5d99 solid;
+  width: 90%;
+}
+
+#fiftyfiftyimg{
+  display: inline;
+  top: 35px;
+  width: 64.25px;
+  height: 40.25px;
+}
+
+#fiftyfiftysection{
+  display: flex;
+  justify-content: center;
+}
+
+/* end of Mobile/Default Version */
+
+
+/* Desktop Version */
+@media (min-width: 900px) {
+
+ .grid-container  {
+    grid-template-areas: 
+      'header header header header' 
+      'left left right right' 
+      'footer1 footer1 footer2 footer2';
+      grid-template-columns: 2fr 2fr 3fr 3fr;
+      grid-template-rows: 1fr 3fr 0.05fr;
+  }
+
+  .footer1{
+    font-size: 20px;
+  }
+
+  .footer2{
+    font-size: 20px;
+  }
+
+  .right{
+    margin-right:100px;
+  }
+
+  
+  #question { 
+    font-size: 50px;
+  }
+
+  .options {
+    font-size:25px;
+    padding: 40px 50px;
+    margin: 15px;
+    border-radius: 15px;
+ }
+
+ .right > img{
+    border: 20px #1c5d99 solid;
+    width: 100%;
+    max-width: 857.142857px;
+    max-height: 600px;
+  }
+  .right {
+    margin:0px;
+    margin-left: 70px;
+    margin-top: 50px;
+  }
+
+  #fiftyfiftyimg{
+    position: absolute;
+    top:15px;
+    right:15px;
+    width: 128.5px;
+    height: 80.5px;
+  }
+
+  h1{
+    font-size: 35px;
+  }
+}/* end of Media Query / Desktop Version */
