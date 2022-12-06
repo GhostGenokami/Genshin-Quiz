@@ -1,1 +1,1 @@
-# Genshin-Quiz
+UwU OwO Nya~
